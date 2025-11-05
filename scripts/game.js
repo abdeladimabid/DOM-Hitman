@@ -292,6 +292,7 @@ const levels = [
 
         let currentLevel = 0;
         let score = 0;
+        let hinted = false;
 
         function loadLevel() {
             const level = levels[currentLevel];
@@ -324,14 +325,17 @@ const levels = [
         });
 
         document.getElementById('show-solution').addEventListener('click', () => {
+            if(!hinted){ score-=200;}
             const hint = levels[currentLevel].hint;
             document.getElementById('hint-area').textContent = 'Hint: ' + hint;
+            hinted=true;
         });
 
         document.getElementById('next-level').addEventListener('click', () => {
             currentLevel++;
             if (currentLevel < levels.length) {
                 document.getElementById('hint-area').textContent = '';
+                hinted=false;
                 loadLevel();
             } else {
                 alert(`Game Over! Final Score: ${score}`);
