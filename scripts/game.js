@@ -140,7 +140,7 @@ const levels = [
             // Levels 6-10: More selection variations
             {
                 title: 'Level 6 - Select by Tag',
-                description: 'Select the target using getElementsByTagName.',
+                description: 'The scene has mixed tags. The target is the first <div> with class "target". Select elements by their tag name "div", access the first one, and apply "hit". Avoid hitting other tags or innocents.',
                 setup: () => {
                     const scene = document.getElementById('scene');
                     scene.innerHTML = `<span class="person" style="left: 100px; bottom: 0;" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></span>
@@ -163,7 +163,7 @@ const levels = [
                         return false;
                     }
                 },
-                hint: 'Use: document.getElementsByTagName("div")[0].classList.add("hit");'
+                hint: 'Use: document.getElementsByTagName("div")[7].classList.add("hit");'
             },
             {
                 title: 'Level 7 - Attribute Selector',
@@ -175,7 +175,15 @@ const levels = [
                                        <div class="person" data-id="3" style="left: 500px; bottom: 0;" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
                                        <div class="person" data-id="4" style="left: 700px; bottom: 0;" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>`;
                     // Add tree or something
-                    scene.innerHTML += `<div style="left: 400px; bottom: 0; width: 20px; height: 150px; background: green;"></div>`;
+                                        
+                    scene.innerHTML += `<div style="left: 400px; bottom: 0; width: 20px; height: 150px;;">
+                                        <div style="position: relative; width: 200px; height: 300px;">
+                                        <div style="position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 40px; height: 150px; background-color: #8b4513; border-radius: 10px;"></div>
+                                        <div style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 120px; height: 100px; background-color: #228b22; border-radius: 50%;"></div>
+                                        <div style="position: absolute; top: 50px; left: 20px; width: 100px; height: 80px; background-color: #228b22; border-radius: 50%;"></div>
+                                        <div style="position: absolute; top: 50px; right: 20px; width: 100px; height: 80px; background-color: #228b22; border-radius: 50%;"></div>
+                                        <div style="position: absolute; top: 100px; left: 50%; transform: translateX(-50%); width: 140px; height: 100px; background-color: #228b22; border-radius: 50%;"></div>
+                                        </div></div>`;
                 },
                 validate: (code) => {
                     try {
@@ -220,7 +228,7 @@ const levels = [
                         return false;
                     }
                 },
-                hint: 'Use: document.querySelector("#container > .target").classList.add("hit");'
+                hint: 'Use: document.querySelector("#market-stall> .target").classList.add("hit");'
             },
             {
                 title: 'Level 9 - Nth Child',
@@ -250,7 +258,7 @@ const levels = [
                         return false;
                     }
                 },
-                hint: 'Use: document.querySelector("#crowd :nth-child(3)").classList.add("hit");'
+                hint: 'Use: document.querySelector("#queue >:nth-child(4)").classList.add("hit");'
             },
             {
                 title: 'Level 10 - Descendant Selector',
