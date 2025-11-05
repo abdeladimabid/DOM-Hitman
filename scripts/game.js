@@ -316,15 +316,22 @@ const levels = [
                 document.getElementById('feedback').style.color = '#4caf50';
                 score += 100;
                 document.getElementById('next-level').disabled = false;
+                document.getElementById('next-level').style.display = 'block';
                 updateProgress();
             } else {
-                document.getElementById('feedback').textContent = 'Missed or hit innocent! Try again. Hint: ' + level.hint;
+                document.getElementById('feedback').textContent = 'Missed or hit innocent! Try again. Hint: ';
             }
+        });
+
+        document.getElementById('show-solution').addEventListener('click', () => {
+            const hint = levels[currentLevel].hint;
+            document.getElementById('hint-area').textContent = 'Hint: ' + hint;
         });
 
         document.getElementById('next-level').addEventListener('click', () => {
             currentLevel++;
             if (currentLevel < levels.length) {
+                document.getElementById('hint-area').textContent = '';
                 loadLevel();
             } else {
                 alert(`Game Over! Final Score: ${score}`);
