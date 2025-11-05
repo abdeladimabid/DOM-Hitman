@@ -1,7 +1,7 @@
 const levels = [
             {
                 title: 'Level 1 - Basic Target Selection',
-                description: 'Select the target using getElementById and add the "hit" class to it.',
+                description: 'In this level, there is a single target with ID "target" standing among innocent people. Your task is to select the element by its ID and apply the "hit" class to it without affecting any innocent bystanders. If you hit an innocent, you fail the level. The target is the red person marked with 🎯.',
                 setup: () => {
                     const scene = document.getElementById('scene');
                     scene.innerHTML = `<div class="person" style="left: 100px; bottom: 0;" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
@@ -27,7 +27,7 @@ const levels = [
             },
             {
                 title: 'Level 2 - Query Selector ID',
-                description: 'Use querySelector to select the target by ID.',
+                description: 'The street is busier now with more innocents. Select the element by its ID using a query selector and apply the "hit" class to the target. Ensure no innocents are hit; only the target should have the "hit" class. The target is still the red 🎯 among the yellow people.',
                 setup: () => {
                     const scene = document.getElementById('scene');
                     scene.innerHTML = `<div class="person" style="left: 50px; bottom: 0;" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
@@ -55,7 +55,7 @@ const levels = [
             },
             {
                 title: 'Level 3 - Select by Class',
-                description: 'Use querySelector to select the target by class.',
+                description: 'The target is now in a crowd and identified by the class "target". Select the element by its class using a query selector and apply the "hit" class. Be careful not to hit the crowd container or any innocents. Only the red 🎯 should fall.',
                 setup: () => {
                     const scene = document.getElementById('scene');
                     scene.innerHTML = `<div class="crowd" style="left: 200px; bottom: 0;">
@@ -84,7 +84,7 @@ const levels = [
             },
             {
                 title: 'Level 4 - Select Multiple by Class',
-                description: 'Use getElementsByClassName to select but hit only the target.',
+                description: 'There are multiple elements with classes, but only one has "target". Select the element by its class using the method that returns a collection of elements with the given class name, then access the first one and apply "hit". Avoid hitting innocents or the car obstacle. The target is behind the car.',
                 setup: () => {
                     const scene = document.getElementById('scene');
                     scene.innerHTML = `<div class="car" style="left: 300px; bottom: 0; width: 150px; height: 80px;"></div>
@@ -111,7 +111,7 @@ const levels = [
             },
             {
                 title: 'Level 5 - Query Selector All',
-                description: 'Use querySelectorAll to select but hit only the second target.',
+                description: 'Multiple elements have the "target" class, but only the middle one is the real target (data-type="target"). Select all elements with "target" class using the method that returns a list, then access the second item (index 1) and apply "hit". Do not hit the decoys or innocents.',
                 setup: () => {
                     const scene = document.getElementById('scene');
                     scene.innerHTML = `<div class="person decoy" style="left: 100px; bottom: 0;" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
@@ -167,7 +167,7 @@ const levels = [
             },
             {
                 title: 'Level 7 - Attribute Selector',
-                description: 'Use querySelector with attribute selector.',
+                description: 'People have data-id attributes. The target has data-id="target". Select the element using an attribute selector in querySelector and apply "hit". Ignore the tree obstacle and don\'t hit innocents.',
                 setup: () => {
                     const scene = document.getElementById('scene');
                     scene.innerHTML = `<div class="person" data-id="1" style="left: 100px; bottom: 0;" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
@@ -204,7 +204,7 @@ const levels = [
             },
             {
                 title: 'Level 8 - Child Selector',
-                description: 'Select the target as a child of a container.',
+                description: 'The target is a direct child of #market-stall. Select it using a child combinator in querySelector and apply "hit". Don\'t hit the other children who are innocents.',
                 setup: () => {
                     const scene = document.getElementById('scene');
                     scene.innerHTML = `<div id="market-stall" style="left: 200px; bottom: 0; width: 300px; height: 100px; background: orange; position: absolute;">
@@ -232,7 +232,7 @@ const levels = [
             },
             {
                 title: 'Level 9 - Nth Child',
-                description: 'Select the target using :nth-child.',
+                description: 'In the queue (#queue), the target is the 4th child. Select it using the :nth-child pseudo-class in querySelector and apply "hit". Ensure only that element is hit, not others in the queue.',
                 setup: () => {
                     const scene = document.getElementById('scene');
                     scene.innerHTML = `<div id="queue" style="left: 100px; bottom: 0; display: flex; position: absolute;">
@@ -262,7 +262,7 @@ const levels = [
             },
             {
                 title: 'Level 10 - Descendant Selector',
-                description: 'Select the target as a descendant.',
+                description: 'The target is deep inside the building (#building). Select it using a descendant combinator in querySelector to find any element with class "target" inside #building and apply "hit". Avoid hitting upper floors\' innocents.',
                 setup: () => {
                     const scene = document.getElementById('scene');
                     scene.innerHTML = `<div id="building" class="building" style="left: 300px; bottom: 0; width: 200px; height: 250px;">
