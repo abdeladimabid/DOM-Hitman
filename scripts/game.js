@@ -4,9 +4,9 @@ const levels = [
                 description: 'Select the target using getElementById and add the "hit" class to it.',
                 setup: () => {
                     const scene = document.getElementById('scene');
-                    scene.innerHTML = `<div class="person" style="left: 100px; bottom: 0;" data-type="innocent">👤</div>
-                                       <div id="target" class="person target" style="left: 400px; bottom: 0;" data-type="target">🎯</div>
-                                       <div class="person" style="left: 700px; bottom: 0;" data-type="innocent">👤</div>`;
+                    scene.innerHTML = `<div class="person" style="left: 100px; bottom: 0;" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
+                                       <div id="target" class="person target" style="left: 400px; bottom: 0;" data-type="target"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
+                                       <div class="person" style="left: 700px; bottom: 0;" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>`;
                 },
                 validate: (code) => {
                     try {
@@ -30,9 +30,11 @@ const levels = [
                 description: 'Use querySelector to select the target by ID.',
                 setup: () => {
                     const scene = document.getElementById('scene');
-                    scene.innerHTML = `<div class="person" style="left: 150px; bottom: 0;" data-type="innocent">👤</div>
-                                       <div id="target" class="person target" style="left: 450px; bottom: 0;" data-type="target">🎯</div>
-                                       <div class="person" style="left: 650px; bottom: 0;" data-type="innocent">👤</div>`;
+                    scene.innerHTML = `<div class="person" style="left: 50px; bottom: 0;" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
+                                       <div class="person" style="left: 150px; bottom: 0;" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
+                                       <div id="target" class="person target" style="left: 450px; bottom: 0;" data-type="target"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
+                                       <div class="person" style="left: 650px; bottom: 0;" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
+                                       <div class="person" style="left: 750px; bottom: 0;" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>`;
                 },
                 validate: (code) => {
                     try {
@@ -56,9 +58,12 @@ const levels = [
                 description: 'Use querySelector to select the target by class.',
                 setup: () => {
                     const scene = document.getElementById('scene');
-                    scene.innerHTML = `<div class="person" style="left: 100px; bottom: 0;" data-type="innocent">👤</div>
-                                       <div class="person target" style="left: 400px; bottom: 0;" data-type="target">🎯</div>
-                                       <div class="person" style="left: 700px; bottom: 0;" data-type="innocent">👤</div>`;
+                    scene.innerHTML = `<div class="crowd" style="left: 200px; bottom: 0;">
+                                         <div class="person" style="left: 0;" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
+                                         <div class="person target" style="left: 60px;" data-type="target"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
+                                         <div class="person" style="left: 120px;" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
+                                       </div>
+                                       <div class="person" style="left: 600px; bottom: 0;" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>`;
                 },
                 validate: (code) => {
                     try {
@@ -82,9 +87,10 @@ const levels = [
                 description: 'Use getElementsByClassName to select but hit only the target.',
                 setup: () => {
                     const scene = document.getElementById('scene');
-                    scene.innerHTML = `<div class="person innocent" style="left: 100px; bottom: 0;" data-type="innocent">👤</div>
-                                       <div class="person target" style="left: 400px; bottom: 0;" data-type="target">🎯</div>
-                                       <div class="person innocent" style="left: 700px; bottom: 0;" data-type="innocent">👤</div>`;
+                    scene.innerHTML = `<div class="car" style="left: 300px; bottom: 0; width: 150px; height: 80px;"></div>
+                                       <div class="person innocent" style="left: 100px; bottom: 0;" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
+                                       <div class="person target" style="left: 400px; bottom: 0;" data-type="target"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
+                                       <div class="person innocent" style="left: 700px; bottom: 0;" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>`;
                 },
                 validate: (code) => {
                     try {
@@ -108,10 +114,11 @@ const levels = [
                 description: 'Use querySelectorAll to select but hit only the second target.',
                 setup: () => {
                     const scene = document.getElementById('scene');
-                    scene.innerHTML = `<div class="person decoy" style="left: 100px; bottom: 0;" data-type="innocent">👤</div>
-                                       <div class="person target" style="left: 300px; bottom: 0;" data-type="innocent">👤</div>
-                                       <div class="person target" style="left: 500px; bottom: 0;" data-type="target">🎯</div>
-                                       <div class="person decoy" style="left: 700px; bottom: 0;" data-type="innocent">👤</div>`;
+                    scene.innerHTML = `<div class="person decoy" style="left: 100px; bottom: 0;" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
+                                       <div class="person target" style="left: 250px; bottom: 0;" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
+                                       <div class="person target" style="left: 400px; bottom: 0;" data-type="target"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
+                                       <div class="person target" style="left: 550px; bottom: 0;" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
+                                       <div class="person decoy" style="left: 700px; bottom: 0;" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>`;
                 },
                 validate: (code) => {
                     try {
@@ -136,9 +143,10 @@ const levels = [
                 description: 'Select the target using getElementsByTagName.',
                 setup: () => {
                     const scene = document.getElementById('scene');
-                    scene.innerHTML = `<span class="person" style="left: 100px; bottom: 0;" data-type="innocent">👤</span>
-                                       <div class="person target" style="left: 400px; bottom: 0;" data-type="target">🎯</div>
-                                       <p class="person" style="left: 700px; bottom: 0;" data-type="innocent">👤</p>`;
+                    scene.innerHTML = `<span class="person" style="left: 100px; bottom: 0;" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></span>
+                                       <div class="person target" style="left: 300px; bottom: 0;" data-type="target"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
+                                       <p class="person" style="left: 500px; bottom: 0;" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></p>
+                                       <div class="building" style="left: 600px; bottom: 0; width: 100px; height: 200px;"></div>`;
                 },
                 validate: (code) => {
                     try {
@@ -162,9 +170,12 @@ const levels = [
                 description: 'Use querySelector with attribute selector.',
                 setup: () => {
                     const scene = document.getElementById('scene');
-                    scene.innerHTML = `<div class="person" data-id="1" style="left: 100px; bottom: 0;" data-type="innocent">👤</div>
-                                       <div class="person" data-id="target" style="left: 400px; bottom: 0;" data-type="target">🎯</div>
-                                       <div class="person" data-id="3" style="left: 700px; bottom: 0;" data-type="innocent">👤</div>`;
+                    scene.innerHTML = `<div class="person" data-id="1" style="left: 100px; bottom: 0;" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
+                                       <div class="person" data-id="target" style="left: 300px; bottom: 0;" data-type="target"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
+                                       <div class="person" data-id="3" style="left: 500px; bottom: 0;" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
+                                       <div class="person" data-id="4" style="left: 700px; bottom: 0;" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>`;
+                    // Add tree or something
+                    scene.innerHTML += `<div style="left: 400px; bottom: 0; width: 20px; height: 150px; background: green;"></div>`;
                 },
                 validate: (code) => {
                     try {
@@ -188,9 +199,10 @@ const levels = [
                 description: 'Select the target as a child of a container.',
                 setup: () => {
                     const scene = document.getElementById('scene');
-                    scene.innerHTML = `<div id="container" style="position: absolute; left: 300px; bottom: 0;">
-                                         <div class="person" data-type="innocent">👤</div>
-                                         <div class="person target" data-type="target">🎯</div>
+                    scene.innerHTML = `<div id="market-stall" style="left: 200px; bottom: 0; width: 300px; height: 100px; background: orange; position: absolute;">
+                                         <div class="person" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
+                                         <div class="person" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
+                                         <div class="person target" data-type="target"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
                                        </div>`;
                 },
                 validate: (code) => {
@@ -215,11 +227,12 @@ const levels = [
                 description: 'Select the target using :nth-child.',
                 setup: () => {
                     const scene = document.getElementById('scene');
-                    scene.innerHTML = `<div id="crowd" style="position: absolute; left: 200px; bottom: 0;">
-                                         <div class="person" data-type="innocent">👤</div>
-                                         <div class="person" data-type="innocent">👤</div>
-                                         <div class="person target" data-type="target">🎯</div>
-                                         <div class="person" data-type="innocent">👤</div>
+                    scene.innerHTML = `<div id="queue" style="left: 100px; bottom: 0; display: flex; position: absolute;">
+                                         <div class="person" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
+                                         <div class="person" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
+                                         <div class="person" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
+                                         <div class="person target" data-type="target"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
+                                         <div class="person" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
                                        </div>`;
                 },
                 validate: (code) => {
@@ -244,9 +257,10 @@ const levels = [
                 description: 'Select the target as a descendant.',
                 setup: () => {
                     const scene = document.getElementById('scene');
-                    scene.innerHTML = `<div id="building" style="position: absolute; left: 300px; bottom: 0; width: 200px; height: 200px; background: #795548;">
-                                         <div class="floor"><div class="person" data-type="innocent">👤</div></div>
-                                         <div class="floor"><div class="room"><div class="person target" data-type="target">🎯</div></div></div>
+                    scene.innerHTML = `<div id="building" class="building" style="left: 300px; bottom: 0; width: 200px; height: 250px;">
+                                         <div class="floor" style="top: 0;"><div class="person" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div></div>
+                                         <div class="floor" style="top: 100px;"><div class="room"><div class="person" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div></div></div>
+                                         <div class="floor" style="top: 200px;"><div class="room"><div class="person target" data-type="target"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div></div></div>
                                        </div>`;
                 },
                 validate: (code) => {
