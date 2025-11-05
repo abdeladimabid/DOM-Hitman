@@ -59,9 +59,9 @@ const levels = [
                 setup: () => {
                     const scene = document.getElementById('scene');
                     scene.innerHTML = `<div class="crowd" style="left: 200px; bottom: 0;">
-                                         <div class="person" style="left: 0;" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
-                                         <div class="person target" style="left: 60px;" data-type="target"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
-                                         <div class="person" style="left: 120px;" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
+                                         <div class="person" style="left: 0; bottom: 0;" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
+                                         <div class="person target" style="left: 60px; bottom: 0;" data-type="target"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
+                                         <div class="person" style="left: 120px; bottom: 0;" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
                                        </div>
                                        <div class="person" style="left: 600px; bottom: 0;" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>`;
                 },
