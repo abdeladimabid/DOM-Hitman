@@ -1015,15 +1015,22 @@ const levels = [
                 },
                 validate: (code) => {
                     try {
-                        const scene = document.getElementById('scene');
+                        let scene = document.getElementById('scene');
                         scene.replaceWith(scene.cloneNode(true));
+                        scene = document.getElementById('scene');
+                        eval(code);
                         eval(code);
                         const target = document.createElement('div');
                         target.classList.add('person', 'target');
                         target.dataset.type = 'target';
                         target.innerHTML = '<div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div>';
                         scene.appendChild(target);
-                        return target.classList.contains('hit');
+                        setTimeout(() => {
+                            console.log(target.classList.contains('hit'));
+                            
+                            return target.classList.contains('hit');
+                        }, 0);
+                        
                     } catch (e) {
                         return false;
                     }
