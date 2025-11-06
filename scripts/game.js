@@ -1027,7 +1027,7 @@ const levels = [
                         scene.appendChild(target);
                         setTimeout(() => {
                             console.log(target.classList.contains('hit'));
-                            
+                            //functtion returns true but still fails validation? 
                             return target.classList.contains('hit');
                         }, 0);
                         
