@@ -5,7 +5,7 @@ const levels = [
                 setup: () => {
                     const scene = document.getElementById('scene');
                     scene.innerHTML = `<div class="person" style="left: 100px; bottom: 0;" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
-                                       <div id="target" class="person target" style="left: 400px; bottom: 0;" data-type="target"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
+                                       <div id="target" class="person target" style="left: 400px; bottom: 0;" data-type="target"><div class="head" style="display: grid;place-items: center;"><span>🎯</span></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
                                        <div class="person" style="left: 700px; bottom: 0;" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>`;
                 },
                 validate: (code) => {
@@ -32,7 +32,7 @@ const levels = [
                     const scene = document.getElementById('scene');
                     scene.innerHTML = `<div class="person" style="left: 50px; bottom: 0;" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
                                        <div class="person" style="left: 150px; bottom: 0;" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
-                                       <div id="target" class="person target" style="left: 450px; bottom: 0;" data-type="target"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
+                                       <div id="target" class="person target" style="left: 450px; bottom: 0;" data-type="target"><div class="head" style="display: grid;place-items: center;"><span>🎯</span></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
                                        <div class="person" style="left: 650px; bottom: 0;" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
                                        <div class="person" style="left: 750px; bottom: 0;" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>`;
                 },
@@ -60,7 +60,7 @@ const levels = [
                     const scene = document.getElementById('scene');
                     scene.innerHTML = `<div class="crowd" style="left: 200px; bottom: 0;">
                                          <div class="person" style="left: 0; bottom: 0;" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
-                                         <div class="person target" style="left: 60px; bottom: 0;" data-type="target"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
+                                         <div class="person target" style="left: 60px; bottom: 0;" data-type="target"><div class="head" style="display: grid;place-items: center;"><span>🎯</span></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
                                          <div class="person" style="left: 120px; bottom: 0;" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
                                        </div>
                                        <div class="person" style="left: 600px; bottom: 0;" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>`;
@@ -89,7 +89,7 @@ const levels = [
                     const scene = document.getElementById('scene');
                     scene.innerHTML = `<div class="car" style="left: 300px; bottom: 0; width: 150px; height: 80px;"></div>
                                        <div class="person innocent" style="left: 100px; bottom: 0;" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
-                                       <div class="person target" style="left: 400px; bottom: 0;" data-type="target"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
+                                       <div class="person target" style="left: 400px; bottom: 0;" data-type="target"><div class="head" style="display: grid;place-items: center;"><span>🎯</span></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
                                        <div class="person innocent" style="left: 700px; bottom: 0;" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>`;
                 },
                 validate: (code) => {
@@ -116,7 +116,7 @@ const levels = [
                     const scene = document.getElementById('scene');
                     scene.innerHTML = `<div class="person decoy" style="left: 100px; bottom: 0;" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
                                        <div class="person target" style="left: 250px; bottom: 0;" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
-                                       <div class="person target" style="left: 400px; bottom: 0;" data-type="target"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
+                                       <div class="person target" style="left: 400px; bottom: 0;" data-type="target"><div class="head" style="display: grid;place-items: center;"><span>🎯</span></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
                                        <div class="person target" style="left: 550px; bottom: 0;" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
                                        <div class="person decoy" style="left: 700px; bottom: 0;" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>`;
                 },
@@ -144,7 +144,7 @@ const levels = [
                 setup: () => {
                     const scene = document.getElementById('scene');
                     scene.innerHTML = `<span class="person" style="left: 100px; bottom: 0;" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></span>
-                                       <div class="person target" style="left: 300px; bottom: 0;" data-type="target"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
+                                       <div class="person target" style="left: 300px; bottom: 0;" data-type="target"><div class="head" style="display: grid;place-items: center;"><span>🎯</span></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
                                        <p class="person" style="left: 500px; bottom: 0;" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></p>
                                        <div class="building" style="left: 600px; bottom: 0; width: 100px; height: 200px;"></div>`;
                 },
@@ -171,7 +171,7 @@ const levels = [
                 setup: () => {
                     const scene = document.getElementById('scene');
                     scene.innerHTML = `<div class="person" data-id="1" style="left: 100px; bottom: 0;" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
-                                       <div class="person" data-id="target" style="left: 300px; bottom: 0;" data-type="target"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
+                                       <div class="person" data-id="target" style="left: 300px; bottom: 0;" data-type="target"><div class="head" style="display: grid;place-items: center;"><span>🎯</span></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
                                        <div class="person" data-id="3" style="left: 500px; bottom: 0;" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
                                        <div class="person" data-id="4" style="left: 700px; bottom: 0;" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>`;
                     // Add tree or something
@@ -210,7 +210,7 @@ const levels = [
                     scene.innerHTML = `<div id="market-stall" style="left: 200px; bottom: 0; width: 300px; height: 100px; background: orange; position: absolute;">
                                          <div class="person" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
                                          <div class="person" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
-                                         <div class="person target" data-type="target"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
+                                         <div class="person target" data-type="target"><div class="head" style="display: grid;place-items: center;"><span>🎯</span></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
                                        </div>`;
                 },
                 validate: (code) => {
@@ -239,7 +239,7 @@ const levels = [
                                          <div class="person" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
                                          <div class="person" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
                                          <div class="person" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
-                                         <div class="person target" data-type="target"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
+                                         <div class="person target" data-type="target"><div class="head" style="display: grid;place-items: center;"><span>🎯</span></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
                                          <div class="person" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div>
                                        </div>`;
                 },
@@ -268,7 +268,7 @@ const levels = [
                     scene.innerHTML = `<div id="building" class="building" style="left: 300px; bottom: 0; width: 200px; height: 250px;">
                                          <div class="floor" style="top: 0;"><div class="person" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div></div>
                                          <div class="floor" style="top: 100px;"><div class="room"><div class="person" data-type="innocent"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div></div></div>
-                                         <div class="floor" style="top: 200px;"><div class="room"><div class="person target" data-type="target"><div class="head"></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div></div></div>
+                                         <div class="floor" style="top: 200px;"><div class="room"><div class="person target" data-type="target"><div class="head" style="display: grid;place-items: center;"><span>🎯</span></div><div class="body"></div><div class="legs"></div><div class="arms"></div></div></div></div>
                                        </div>`;
                 },
                 validate: (code) => {
@@ -296,7 +296,11 @@ const levels = [
 
         function loadLevel() {
             const level = levels[currentLevel];
+            document.getElementById('hint-area').textContent = '';
+            hinted=false;
+            document.getElementById('next-level').style.display = 'none';
             document.getElementById('level-title').textContent = level.title;
+            document.getElementById('level-desc').textContent = level.description;
             level.setup();
             document.getElementById('code-editor').value = '';
             document.getElementById('feedback').textContent = '';
@@ -334,8 +338,6 @@ const levels = [
         document.getElementById('next-level').addEventListener('click', () => {
             currentLevel++;
             if (currentLevel < levels.length) {
-                document.getElementById('hint-area').textContent = '';
-                hinted=false;
                 loadLevel();
             } else {
                 alert(`Game Over! Final Score: ${score}`);
@@ -343,7 +345,6 @@ const levels = [
         });
 
         document.getElementById('reset-level').addEventListener('click', () => {
-            // Remove hits
             document.querySelectorAll('.hit').forEach(el => el.classList.remove('hit'));
             loadLevel();
         });
