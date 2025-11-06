@@ -1214,9 +1214,10 @@ const levels = [
             }
         ];
 
-        let currentLevel = 0;
-        let score = 0;
+        let currentLevel = localStorage.getItem('currentLevel') ? parseInt(localStorage.getItem('currentLevel')) : 0;
+        let score = localStorage.getItem('score') ? parseInt(localStorage.getItem('score')) : 0;
         let hinted = false;
+        
 
         function loadLevel() {
             const level = levels[currentLevel];
@@ -1261,6 +1262,8 @@ const levels = [
 
         document.getElementById('next-level').addEventListener('click', () => {
             currentLevel++;
+            localStorage.setItem('currentLevel', currentLevel);
+            localStorage.setItem('score', score);
             if (currentLevel < levels.length) {
                 loadLevel();
             } else {
